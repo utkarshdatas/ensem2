@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 275px; /* Adjust this value based on your needs */
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+<div class="bg-white p-8 rounded shadow-md w-3/4 mx-auto">
+    <h2 class="text-2xl font-semibold mb-6">Sign Up</h2>
+    <form id="signupForm" action="signup.php" method="post">
+        <div class="mb-4">
+            <label for="name" class="block text-gray-600 text-sm font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-600 text-sm font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="dob" class="block text-gray-600 text-sm font-medium mb-2">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="gender" class="block text-gray-600 text-sm font-medium mb-2">Gender</label>
+            <select id="gender" name="gender" class="w-full p-2 border rounded">
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="College" class="block text-gray-600 text-sm font-medium mb-2">College name</label>
+            <input type="text" id="College" name="College" class="w-full p-2 border rounded">
+        </div>
+
+        <div class="mb-4">
+            <label for="phone" class="block text-gray-600 text-sm font-medium mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0,6,9]{1}[0-9]{9}" title="Please enter a 10-digit phone number starting with 0, 6, or 9" class="w-full p-2 border rounded">
+        </div>
+
+        <div class="mb-4">
+            <label for="password" class="block text-gray-600 text-sm font-medium mb-2">Password</label>
+            <input type="password" id="password" name="password" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="confirmPassword" class="block text-gray-600 text-sm font-medium mb-2">Re-enter Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="cache" class="block text-gray-600 text-sm font-medium mb-2">Cache</label>
+            <p id="cache" class="w-full p-2 border rounded"></p>
+        </div>
+        <div class="mb-4">
+            <label for="cacheAnswer" class="block text-gray-600 text-sm font-medium mb-2">Enter Cache</label>
+            <input type="text" id="cacheAnswer" name="cacheAnswer" class="w-full p-2 border rounded">
+        </div>
+        <button type="button" onclick="validateForm()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Sign Up</button>
+    </form>
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
